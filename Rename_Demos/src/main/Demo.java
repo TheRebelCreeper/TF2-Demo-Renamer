@@ -32,10 +32,10 @@ public class Demo
 			{
 				String tmp = "";
 				file = new FileReader(demo);
-				char[] cbuf = new char[4276];
+				char[] cbuf = new char[65536];
 				while(!tmp.contains(".bsp"))
 				{
-					file.read(cbuf, 0, 4276);
+					file.read(cbuf, 0, 65536);
 					tmp = new String(cbuf);
 				}
 				file.close();
