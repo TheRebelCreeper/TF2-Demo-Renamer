@@ -29,7 +29,7 @@ public class Demo
 		for (File demo: rootDir.listFiles())
 		{
 			// If the file name has no letters except for the extension
-			if (demo.getName().contains(".dem")&& Pattern.matches("[^a-zA-Z]+", demo.getName().replace(".dem", "")))
+			if (demo.getName().contains(".dem")&& Pattern.matches("([a-zA-Z]*)(_?)([^a-zA-Z]+)", demo.getName().replace(".dem", "")))
 			{
 				mapName = readDemo(demo);
 				name = demo.getName().replace(".dem", "");
