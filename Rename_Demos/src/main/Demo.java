@@ -28,7 +28,6 @@ public class Demo
 		
 		for (File demo: rootDir.listFiles())
 		{
-			System.out.println(demo.getName());
 			// If the file name has no letters except for the extension
 			if (demo.getName().contains(".dem")&& Pattern.matches("([a-zA-Z]*)(_?)([^a-zA-Z]+)", demo.getName().replace(".dem", "")))
 			{
@@ -57,7 +56,6 @@ public class Demo
 		String tmp = "";
 		FileReader file = new FileReader(demo);
 		char[] cbuf = new char[65536];
-		System.out.println("START");
 		while (file.read(cbuf, 0, 65536) != -1)
 		{
 			tmp = new String(cbuf);
